@@ -1,0 +1,81 @@
+//Variables de colores
+
+$grey: #bbbbbb;
+$header-background:$grey;
+$link-normal: #000;
+$link-hover: rgb(107, 107, 107);
+$link-active: rgb(214, 214, 214);
+
+//Variables de paddding
+
+$padding: 1em;
+
+//General
+
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+//Elemenros de la cabecera
+
+.header{
+    background-color: $header-background;
+}
+
+//Barra de navegación
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: $padding;
+}
+
+//Tamaños de iconos
+
+$size : (40px, 60px, 160px);
+
+//Breakpoints para la página
+
+$breakpoints : (
+    "pequeño": 576px,
+    "medio": 768px,
+    "grande": 992px
+);
+
+//Interpolación en selectores
+
+$button-type: "error";
+$btn-color: #f00;
+
+.btn-#{$button-type}{
+    background-color: $btn-color;
+}
+
+//Interpolación en uso de funciones
+
+$fondo: "img/fondos/fdefault.png";
+
+.contaienr{
+    background-image: url('#{$fondo}');
+}
+
+//Interpolación en comentarios
+
+$autor: "Yo";
+
+//Anidamiento básico
+
+a{
+    color: $link-normal;
+    text-decoration: none;
+
+    &:hover {
+        color: $link-hover;
+    }
+    &:active{
+        color: $link-active;
+    }
+}
