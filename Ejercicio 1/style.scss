@@ -1,0 +1,68 @@
+//Colores generales
+$color-background: #CCC;
+$color-base: #333;
+
+//Colores de menú
+$navbar-background-color:rgb(155,111,145);
+$navbar-color-hover: $color-background;
+
+//Colores del borde
+$border-color: $color-base;
+$border-style: "solid";
+$border-width: 0.1rem;
+
+$border-radius: 1rem;
+
+$figure-width: 20%;
+
+$main-container-width: 80%;
+
+.container{
+    width: $main-container-width;
+    margin: 0px auto;
+    font-family: sans-serif;
+}
+
+.container-nav{
+    background-color: $navbar-background-color;
+    padding: 1rem;
+    .container-nav-ul{
+        display: flex;
+
+        li{
+            list-style: none;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            &.active{
+                color: $navbar-color-hover;
+                font-weight: lighter;
+            }
+
+            &:hover{
+                color: $navbar-color-hover;
+            }
+
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.container-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+figure.container-card{
+    border: $border-width #{$border-style} $border-color;
+    border-radius: $border-radius;
+    padding: 1rem;
+    width: $figure-width;
+
+    img{
+        border-radius: 2*$border-radius;
+        width: 100%;
+    }
+}
